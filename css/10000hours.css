@@ -1,29 +1,188 @@
 @font-face {
-    font-family: 'OTEnjoystoriesBA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "OTEnjoystoriesBA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'GmarketSansBold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 400;
-    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2")
+      format("woff2"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff")
+      format("woff"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf")
+      format("opentype");
+}
+
+body {
+  font-family: "GmarketSansMedium";
+  background-color: #5b2386;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+/* 1만시간의 법칙 타이틀 */
+.title-container {
+  position: relative;
+  margin-top: 120px;
+  text-align: center;
+}
+.title-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 112px;
+}
+
+/* 메인컨텐츠 */
+main {
+  margin: 46px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  font-size: 1.5rem;
+}
+
+/* 인용구 영역*/
+.quote-container {
+  position: relative;
+}
+.quote {
+  font-family: "OTEnjoystoriesBA";
+  font-size: 2.25rem;
+  color: #f5df4d;
+}
+
+.meaning {
+  position: relative;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-top: 78px;
+}
+.meaning img {
+  position: absolute;
+  top: calc(50% - 18px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.meaning b {
+  font-family: "GmarketSansBold";
+  font-size: 1.5rem;
+}
+
+/* 입력창 영역 */
+.input-container {
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  font-size: 1.5rem;
+}
+
+.input-container input {
+  width: 228px;
+  height: 57px;
+  border-radius: 7px;
+  border: none;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "GmarketSansMedium";
+  color: #babcbe;
+}
+
+.job,
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 16px;
+}
+
+/* 계산버튼 영역 */
+.calculate {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+.calculate > img {
+  transform: translateY(20px);
+}
+
+button {
+  background-color: #f5df4d;
+  color: #5b2386;
+  padding: 21px 49px;
+  font-size: 1.5rem;
+  font-family: "GmarketSansBold";
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+/* 결과영역 */
+.result-container {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+}
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 12px;
+}
+.value {
+  font-size: 4.5rem;
+}
+
+/* 버튼영역 */
+.button-wrapper {
+  margin-top: 127px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 27px;
+}
+.share > button {
+  background-color: white;
+}
+
+/* 저작권 */
+footer {
+  margin: 130px auto;
+  margin-bottom: 70px;
+}
+
+footer p {
+  margin-top: 20px;
+  font-size: 0.75rem;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  line-height: 17.38px;
+  text-align: center;
 }
