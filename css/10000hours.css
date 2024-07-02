@@ -34,13 +34,17 @@
       format("opentype");
 }
 
+:root {
+  --font-size-normal: 1.5rem;
+  --font-size-small: 0.875rem;
+}
+
 body {
   font-family: "GmarketSansMedium";
   background-color: #5b2386;
   margin: auto;
   text-align: center;
   color: white;
-  box-sizing: border-box;
 }
 
 .mobile-none {
@@ -54,15 +58,14 @@ body {
 .title-container {
   position: relative;
   margin-top: 120px;
-  text-align: center;
 }
 .title-img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: auto;
-  height: 112px;
+  width: 564px;
+  height: auto;
 }
 
 /* 메인컨텐츠 */
@@ -71,7 +74,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 100px;
-  font-size: 1.5rem;
+  font-size: var(--font-size-normal);
 }
 
 /* 인용구 영역*/
@@ -98,7 +101,7 @@ main {
 }
 .meaning b {
   font-family: "GmarketSansBold";
-  font-size: 1.5rem;
+  font-size: var(--font-size-normal);
 }
 
 /* 입력창 영역 */
@@ -107,7 +110,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 27px;
-  font-size: 1.5rem;
+  font-size: var(--font-size-normal);
 }
 
 .input-container input {
@@ -116,7 +119,8 @@ main {
   border-radius: 7px;
   border: none;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: var(--font-size-normal);
+  padding-top: 5px;
   font-family: "GmarketSansMedium";
   color: #babcbe;
 }
@@ -144,7 +148,7 @@ main {
   gap: 7px;
 }
 .calculate > img {
-  transform: translateY(20px);
+  transform: translateY(24px);
   width: 64px;
   height: 72px;
 }
@@ -153,7 +157,7 @@ button {
   background: #fcee21;
   color: #5b2386;
   padding: 21px 49px;
-  font-size: 1.5rem;
+  font-size: var(--font-size-normal);
   font-family: "GmarketSansBold";
   border: none;
   border-radius: 100px;
@@ -266,8 +270,7 @@ footer p {
 /* 노트북 반응형 */
 @media (max-width: 1600px) {
   .modal-wrapper {
-    height: calc(100vh - 100px);
-    max-height: 500px;
+    height: calc(95vh);
   }
   #modal img {
     max-width: 300px;
@@ -299,7 +302,7 @@ footer p {
 
   main {
     margin-top: 31px;
-    font-size: 0.875rem;
+    font-size: var(--font-size-small);
     gap: 50px;
   }
 
@@ -310,8 +313,7 @@ footer p {
   }
   .meaning,
   .meaning b {
-    font-size: 0.875rem;
-    line-height: 1.5rem;
+    font-size: var(--font-size-small);
     margin-top: 62px;
   }
   .meaning img {
@@ -324,7 +326,7 @@ footer p {
     display: flex;
     flex-direction: column;
     gap: 17px;
-    font-size: 14px;
+    font-size: var(--font-size-small);
   }
   .time {
     display: block;
@@ -336,7 +338,7 @@ footer p {
   .input-container input {
     width: 156px;
     height: 37px;
-    font-size: 14px;
+    font-size: var(--font-size-small);
     font-family: "GmarketSansMedium";
     color: #babcbe;
   }
@@ -349,14 +351,14 @@ footer p {
   .calculate > img {
     width: 43px;
     height: 38px;
-    transform: translateY(10px);
+    transform: translateY(7px);
   }
 
   button {
     background: #fcee21;
     color: #5b2386;
     padding: 21px 49px;
-    font-size: 14px;
+    font-size: var(--font-size-small);
     font-family: "GmarketSansBold";
     border: none;
     border-radius: 13px;
@@ -364,7 +366,7 @@ footer p {
   }
 
   .result-container {
-    margin-top: 14px;
+    font-size: var(--font-size-small);
     display: flex;
     flex-direction: column;
     row-gap: 17px;
@@ -373,7 +375,7 @@ footer p {
     column-gap: 8px;
   }
   .value {
-    font-size: 24px;
+    font-size: var(--font-size-normal);
   }
 
   .button-wrapper {
@@ -391,6 +393,7 @@ footer p {
   }
   footer img {
     width: 91px;
+    height: auto;
   }
   footer p {
     margin-top: 17px;
@@ -405,7 +408,7 @@ footer p {
   }
 
   .modal-title {
-    font-size: 64px;
+    font-size: 4rem;
   }
 
   .modal-title span {
@@ -413,7 +416,7 @@ footer p {
   }
 
   .modal-title p {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 
   #modal img {
