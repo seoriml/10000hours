@@ -121,6 +121,13 @@ main {
   column-gap: 16px;
 }
 
+.time > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 16px;
+}
+
 /* 계산버튼 영역 */
 .calculate {
   margin-top: 15px;
@@ -130,6 +137,8 @@ main {
 }
 .calculate > img {
   transform: translateY(20px);
+  width: 64px;
+  height: 72px;
 }
 
 button {
@@ -177,6 +186,11 @@ button {
 footer {
   margin: 130px auto;
   margin-bottom: 70px;
+}
+
+footer img {
+  width: 125px;
+  height: auto;
 }
 
 footer p {
@@ -236,4 +250,134 @@ footer p {
 
 #close_modal {
   box-shadow: 0px 0px 10px 0px #00000080;
+}
+
+.mobile {
+  display: none;
+}
+
+/* 노트북 반응형 */
+@media (min-width: 1600px) {
+  body {
+    /* background-color: lightblue; */
+  }
+}
+
+/* 모바일 반응형 */
+@media (max-width: 850px) {
+  .title-container {
+    margin-top: 47px;
+  }
+  .title-img {
+    max-width: 267px;
+    height: auto;
+  }
+  .clock-img {
+    max-width: 125px;
+    height: auto;
+  }
+
+  main {
+    margin-top: 31px;
+    font-size: 0.875rem;
+    gap: 50px;
+  }
+
+  .quote {
+    font-family: "OTEnjoystoriesBA";
+    font-size: 22px;
+    color: #f5df4d;
+  }
+  .meaning,
+  .meaning b {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    margin-top: 62px;
+  }
+  .meaning img {
+    top: calc(50% - 5px);
+    width: 302px;
+  }
+
+  .input-container {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    font-size: 14px;
+  }
+  .time {
+    display: block;
+    margin-bottom: 17px;
+  }
+  .time > div {
+    margin-top: 17px;
+  }
+  .input-container input {
+    width: 156px;
+    height: 37px;
+    font-size: 14px;
+    font-family: "GmarketSansMedium";
+    color: #babcbe;
+  }
+  .mobile {
+    display: block;
+  }
+
+  .calculate {
+    align-items: end;
+    margin-top: 0px;
+    row-gap: 6px;
+  }
+  .calculate > img {
+    width: 43px;
+    height: 38px;
+    transform: translateY(10px);
+  }
+
+  button {
+    background: #fcee21;
+    color: #5b2386;
+    padding: 21px 49px;
+    font-size: 14px;
+    font-family: "GmarketSansBold";
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+  }
+
+  .result-container {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
+  }
+  .result {
+    column-gap: 8px;
+  }
+  .value {
+    font-size: 24px;
+  }
+
+  .button-wrapper {
+    margin-top: 55px;
+    gap: 13px;
+  }
+  .button-wrapper button {
+    border-radius: 100px;
+    padding: 13px 18px;
+  }
+
+  footer {
+    margin: 83px auto;
+    margin-bottom: 32px;
+  }
+  footer img {
+    width: 91px;
+  }
+  footer p {
+    margin-top: 17px;
+    font-size: 9px;
+    line-height: 13.03px;
+  }
 }
