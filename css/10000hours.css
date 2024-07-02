@@ -40,6 +40,14 @@ body {
   margin: auto;
   text-align: center;
   color: white;
+  box-sizing: border-box;
+}
+
+.mobile-none {
+  display: block;
+}
+.mobile-block {
+  display: none;
 }
 
 /* 1만시간의 법칙 타이틀 */
@@ -235,6 +243,9 @@ footer p {
 .modal-title h2 {
   font-size: 5.625rem;
 }
+.modal-title span {
+  display: inline-block;
+}
 
 .modal-title p {
   font-size: 2.25rem;
@@ -252,19 +263,28 @@ footer p {
   box-shadow: 0px 0px 10px 0px #00000080;
 }
 
-.mobile {
-  display: none;
-}
-
 /* 노트북 반응형 */
-@media (min-width: 1600px) {
-  body {
-    /* background-color: lightblue; */
+@media (max-width: 1600px) {
+  .modal-wrapper {
+    height: calc(100vh - 100px);
+    max-height: 500px;
+  }
+  #modal img {
+    max-width: 300px;
+    margin-top: 24px;
+    margin-bottom: 34px;
   }
 }
 
 /* 모바일 반응형 */
 @media (max-width: 850px) {
+  .mobile-block {
+    display: block;
+  }
+  .mobile-none {
+    display: none;
+  }
+
   .title-container {
     margin-top: 47px;
   }
@@ -319,9 +339,6 @@ footer p {
     font-size: 14px;
     font-family: "GmarketSansMedium";
     color: #babcbe;
-  }
-  .mobile {
-    display: block;
   }
 
   .calculate {
@@ -379,5 +396,27 @@ footer p {
     margin-top: 17px;
     font-size: 9px;
     line-height: 13.03px;
+  }
+
+  .modal-wrapper {
+    max-width: 330px;
+    max-height: 500px;
+    padding: 40px 0;
+  }
+
+  .modal-title {
+    font-size: 64px;
+  }
+
+  .modal-title span {
+    display: none;
+  }
+
+  .modal-title p {
+    font-size: 36px;
+  }
+
+  #modal img {
+    max-width: 240px;
   }
 }
